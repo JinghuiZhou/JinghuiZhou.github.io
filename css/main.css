@@ -1,103 +1,62 @@
-body { 
-  	font-family: Verdana, sans-serif;
-	color:#303030;
-	background:#fff;
-	text-align:center; /* for IE */
-  	margin:0 auto; /* for the rest */
-  	max-width: 960px;
+/* 通用字体栈 */
+:root {
+  --serif-font: Cambria, Cochin, Georgia, Times, "Times New Roman", serif;
 }
 
-table{
-	background-color: #ffffff;
-	text-align: center;
+body {
+  font-family: Verdana, sans-serif;
+  color: #303030;
+  background: #fff;
+  text-align: center;
+  margin: 0 auto;
+  max-width: 960px;
 }
+
+table {
+  background-color: #fff;
+  text-align: center;
+}
+
 a, a:link, a:visited {
   color: #1f82a9;
-  background:inherit;
   background-color: transparent;
-  text-decoration: underline; 
+  text-decoration: underline;
   cursor: pointer;
 }
 a:hover {
   color: #006699;
-  background:inherit;
   text-decoration: underline;
 }
+
 img { border: 0; }
-h1,h2,h3 { font-family: Cambria, Helvetica, Arial, Verdana, san-serif; }
 
-.style1 {
-	text-align: center;
+h1, h2, h3 { font-family: var(--serif-font); }
+
+/* 文本对齐 */
+.style1, .style7 { text-align: center; }
+.style2, .style5 { text-align: left; }
+.style7 { font-size: large; }
+.style4 { vertical-align: top; }
+
+/* 蓝色大号文字 */
+.style3, .style5 {
+  font-size: large;
+  color: #0000ff;
 }
-.style2 {
-	text-align: left;
-}
-.style3 {
-	font-size: large;
-	color: #0000FF;
-}
-.style4 {
-	vertical-align: top;
-}
-.style5 {
-	text-align: left;
-	font-size: large;
-	color: #0000FF;
-}
-.style7 {
-	text-align: center;
-	font-size: large;
-}
-.auto-style1 {
-	text-align: center;
-	font-family: Cambria, Cochin, Georgia, Times, "Times New Roman", serif;
-}
-.auto-style2 {
-	font-family: Cambria, Cochin, Georgia, Times, "Times New Roman", serif;
-}
-.auto-style3 {
-	font-family: Cambria, Cochin, Georgia, Times, "Times New Roman", serif;
-	font-weight: bold;
-}
-.auto-style4 {
-	text-align: left;
-	font-size: large;
-	color: #0000FF;
-	font-family: Cambria, Cochin, Georgia, Times, "Times New Roman", serif;
-}
-.auto-style5 {
-	text-align: left;
-	font-family: Cambria, Cochin, Georgia, Times, "Times New Roman", serif;
-}
-.auto-style5-c {
-	text-align: center;
-	font-family: Cambria, Cochin, Georgia, Times, "Times New Roman", serif;
-}
-.auto-style6 {
-	font-size: large;
-	color: #0000FF;
-	font-family: Cambria, Cochin, Georgia, Times, "Times New Roman", serif;
-}
-.auto-style7 {
-	text-align: center;
-	font-size: large;
-	font-family: Cambria, Cochin, Georgia, Times, "Times New Roman", serif;
-}
-.auto-style8 {
-	border-width: 0px;
-}
-.auto-style9 {
-	font-family: Cambria, Cochin, Georgia, Times, "Times New Roman", serif;
-	font-size: x-large;
-}
-.auto-style10 {
-	vertical-align: top;
-	text-align: center;
-}
+/* auto-style 系列 - 使用 CSS 变量统一字体 */
+.auto-style1, .auto-style5-c, .auto-style7 { text-align: center; }
+.auto-style1, .auto-style2, .auto-style3, .auto-style4, .auto-style5,
+.auto-style5-c, .auto-style6, .auto-style7, .auto-style9 { font-family: var(--serif-font); }
+.auto-style3 { font-weight: bold; }
+.auto-style4, .auto-style5 { text-align: left; }
+.auto-style4, .auto-style6, .auto-style7 { font-size: large; color: #0000ff; }
+.auto-style8 { border-width: 0; }
+.auto-style9 { font-size: x-large; }
+.auto-style10 { vertical-align: top; text-align: center; }
 
 
-.highlight{
-	font-family: Cambria, Cochin, Georgia, Times, "Times New Roman", serif;
-	font-weight: bold;
-	color: #FF0000;
+.highlight {
+  font-family: var(--serif-font);
+  font-weight: bold;
+  color: #f00;
 }

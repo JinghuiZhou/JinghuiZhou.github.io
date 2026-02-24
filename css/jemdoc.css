@@ -404,6 +404,12 @@ img {
     border: none;
 }
 
+/* 项目配图自适应，避免大图撑破布局 */
+img.project-img {
+    max-width: 100%;
+    height: auto;
+}
+
 table.imgtable, table.imgtable td {
     border: none;
     text-align: left;
